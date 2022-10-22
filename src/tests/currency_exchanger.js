@@ -9,3 +9,33 @@ export class ExchangeCurrency {
     }
 
   }
+
+  makeRequest(method, url) {
+    return new Promise(function (resolve, reject) {
+      let request = new XMLHttpRequest();
+      request.open(method, url);
+      request.onload = function () {
+        if (this.status >= 200 && this.status < 300) {
+          resolve(request.response);
+        } else {
+          let errorText = "Error";
+          const error = request.response;
+          if (error) {
+            errorText = error["error-type"];
+          }
+          reject({
+            status: this.status,
+            statusText: errorText
+          });
+        }
+      };
+      request.onerror = function () {
+        reject({
+          status: this.status,
+          statusText: request.statusText
+        });
+      };
+      request.send();
+    });
+  }
+}
