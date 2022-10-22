@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <meta charset="utf-8" />
-    <title>Currency</title>
+  <title>Weather</title>
 </head>
 <body>
-<label for=""></label>
-<input type="text" id="" name="" required
-       minlength="1" maxlength="8" size="10">
-
-<label for="planet"></label>
-
-<select name="planet" id="planet">
-    <option value="mercury">Mercurial</option>
-    <option value="venus"></option>
-    <option value="mars"></option>
-    <option value="jupiter"></option>
-</select>
-<input id="" type="button" value="" onclick="">
-<div id=""></div>
+  <div class="container">
+        <form id="currency-form">
+            <p> Please enter $USD <input type="number" id=""userInput" name="userInput" value="0">
+            <select id="currencies">  
+                <option>South Korean Won </option>  
+                <option>Mexico Peso</option>  
+                <option>Swiss Franc </option>  
+                <option>English Pound </option>  
+                <option> Russian Rupees </option>  
+            </select>
+            <button type="submit">Calculate</button>
+        </form>
+    <p id="showResponse"></p>
+  </div>
 </body>
 </html>
