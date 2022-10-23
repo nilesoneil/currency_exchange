@@ -5,17 +5,15 @@
 </head>
 <body>
   <div class="container">
-        <form id="currency-form">
-            <p> Please enter $USD <input type="number" id=""userInput" name="userInput" value="0">
+            <p> Please enter $USD <input type="number" id="userInput" name="userInput" value="0">
             <select id="currencies">  
-                <option>South Korean Won </option>  
-                <option>Mexico Peso</option>  
-                <option>Swiss Franc </option>  
-                <option>English Pound </option>  
-                <option> Russian Rupees </option>  
+                <option value ="KRW">South Korean Won </option>  
+                <option value ="MXN">Mexico Peso</option>  
+                <option value="CHF">Swiss Franc </option>  
+                <option value="GBP">English Pound </option>  
+                <option value="RUB"> Russian Ruble </option>  
             </select>
-            <button type="submit">Calculate</button>
-        </form>
+            <input id="convertCurrency" type="button" value="convert">
     <p id="showResponse"></p>
   </div>
 </body>

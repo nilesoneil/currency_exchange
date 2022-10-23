@@ -1,11 +1,12 @@
-import {PlanetaryAgeOfConsentCalculator} from "./calculations";
+import {ExchangeCurrency} from './currency_exchanger.js'
 
-function component() {
-  const val = document.getElementById("bde").value;
-  const planet = document.getElementById("planet").value;
-  const dc = new PlanetaryAgeOfConsentCalculator(val);
-  document.getElementById("bdeEnergy").innerHTML = dc.calculateAgeOnPlanet(planet) + " BIG DIC ENERGY";
-}
-window.addEventListener('load', () => {
-  document.getElementById("bdeButton").addEventListener("click", component);
-});
+async function makeRequest() {
+    const amount = document.getElementById("userInput").value;
+    const other = document.getElementById("currencies").value;
+    ExchangeCurrency.convertToNewCurrency(amount, other).then((converted) => {
+      document.getElementById("showResponse").innerHTML = converted;
+    }); 
+  }
+  window.addEventListener('load', () => {
+      document.getElementById("convertCurrency").addEventListener("click", makeRequest);
+  });
