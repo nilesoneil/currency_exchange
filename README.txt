@@ -30,8 +30,8 @@ _A simple currency exchange application allowing users to type in an amount in U
 * _Add your API key to .env like the following example: API_KEY=pastedApiKey_
 * _Run $ npm install in terminal/console_
 * _Run $ npm run build in terminal/console_
-* _Run $ npm run start in terminal/console_
-* _Enjoy converting USD_
+* _Make sure you are in the "dist" directory on the live server (dist/index.html)
+* _Use to convert USD to other currencies_
 
 ## Known Bugs
 
