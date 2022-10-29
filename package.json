@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack --mode=development"
+    "build": "webpack --mode=development",
+    "start": "npm run build && webpack-dev-server --open --mode=development",
+    "lint": "eslint src/*.js"
   },
   "keywords": [],
   "author": "",
